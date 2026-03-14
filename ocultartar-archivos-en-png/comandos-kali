@@ -1,9 +1,30 @@
 la herramienta que se usar es: steghide
   sudo su  
-vladimir@kali:~/Downloads$ nano vladi.txt
 
- steghide embed -ef vladi.txt -cf carro.jpeg -sf imagen_con_texto.jpeg
-  enter passphrase: 
-Re-Enter passphrase: 
-embedding "vladi.txt" in "carro.jpeg"... done
-writing stego file "imagen_con_texto.jpeg"... done
+mensaje de texto
+  vladimir@kali:~/Downloads$ nano vladi.txt
+
+crear el duplicado con el archivo oculto
+
+            ┌──(root㉿kali)-[/home/vladimir/Downloads]
+            └─# steghide embed -ef vladi.txt -cf carro.jpeg -sf imagen_con_texto.jpeg
+                Enter passphrase: 
+                Re-Enter passphrase: 
+                embedding "vladi.txt" in "carro.jpeg"... done
+                writing stego file "imagen_con_texto.jpeg"... done
+
+eliminar un archivo
+
+                ──(root㉿kali)-[/home/vladimir/Downloads]
+                └─# rm carro.jpeg                                                                
+
+
+sacar el mensaje oculto de la imagen
+
+                  ┌──(root㉿kali)-[/home/vladimir/Downloads]
+                  └─# steghide extract -sf imagen_con_texto.jpeg
+                  Enter passphrase: 
+                  the file "vladi.txt" does already exist. overwrite ? (y/n) y
+                  wrote extracted data to "vladi.txt".
+
+
