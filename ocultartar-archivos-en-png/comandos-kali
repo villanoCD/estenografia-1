@@ -1,0 +1,9 @@
+la herramienta que se usar es: steghide
+  sudo su  
+vladimir@kali:~/Downloads$ nano vladi.txt
+
+ steghide embed -ef vladi.txt -cf carro.jpeg -sf imagen_con_texto.jpeg
+  enter passphrase: 
+Re-Enter passphrase: 
+embedding "vladi.txt" in "carro.jpeg"... done
+writing stego file "imagen_con_texto.jpeg"... done
