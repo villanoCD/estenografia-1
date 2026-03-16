@@ -1,1 +1,11 @@
+para crear el archivo
 
+nano malo.sh
+
+permisos de ejecucion
+chmod +x malo.sh
+
+paso final para ejecutar el comando 
+./malo.sh
+
+y hay se ejecutara las imagenes cada una con contrasena segun el archivo anterior 
